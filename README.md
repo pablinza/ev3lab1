@@ -38,18 +38,18 @@ from pybricks.parameters import Port, Direction
 from pybricks.tools import wait
 ev3 = EV3Brick() # Inicializar el Brick
 motor = Motor(Port.A) # Configurar el motor en el puerto A
-sensor_ir = InfraredSensor(Port.4) # Configurar el sensor infrarrojo en el puerto 4
-ev3.speaker.beep()
+sensor_ir = InfraredSensor(Port.4) # Configurar el sensor IR en el puerto 4
+ev3.speaker.beep() # Emite un pitido de inicio
 print("Sistema listo. Esperando objeto...")
 while True:
-    distancia = sensor_ir.distance() # Leer la proximidad del objeto
-    if distancia > 0 and distancia < 30: # # Comprobar si hay un objeto dentro del umbral (0-100)
-        ev3.speaker.say("Objeto detectado")
-        motor.run_angle(200, 360) # Girar el motor 360 grados a una velocidad moderada (200 grados/segundo)
-        wait(500) # Pausa breve para evitar activaciones repetidas inmediatas
+    distancia = sensor_ir.distance() # Leer la proximidad del objeto (retorna 0-100)
+    if distancia > 0 and distancia < 30: # # Comprobar si hay un objeto cercano (0-30)
+        ev3.speaker.say("Objeto detectado") # Reproduce audio
+        motor.run_angle(200, 360) # Girar motor 360 grados a velocidad 200 grados/seg
+        wait(500) # Pausa breve
     else:
-        motor.stop() # Mantener el motor detenido si no hay objetos cerca
-    wait(50) # Pequeña pausa para no saturar el procesador del EV3
+        motor.stop() # Detiene motor si no hay objetos cerca
+    wait(50) # Pausa ms
 ```
 
 <br />
