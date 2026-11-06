@@ -14,7 +14,7 @@ En el siguiente enlace [--> Click](https://youtu.be/wHSbDzvcbXE) dejo un vídeo 
   <img src="/images/ev3kit.png"></img>
 </p> <br />
 
-Todos los puertos de entrada y salida tienen capacidades y una configuracion similar, por lo que un sensor o actuador puede conectarse a cualquiera de los cuatro puertos siempre que corresponda un sensor como entrada y actuador como salida. Incluso los puertos de salida contienen lineas de realimentación para el control de lazo cerrado en los motores. Aquí dejo una descripción de los pines que resume la funcionalidad:
+Todos los puertos de entrada y salida tienen capacidades y una configuracion similar, por lo que un sensor o actuador puede conectarse a cualquiera de los cuatro puertos siempre que corresponda un sensor como entrada (1,2,3,4) y actuador como salida (A,B,C,D). Incluso los puertos de salida contienen lineas de realimentación para el control de lazo cerrado en los motores. Aquí dejo una descripción de los pines que resume la funcionalidad:
 <br />
 <div align="center"> 
   
@@ -35,40 +35,20 @@ from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor, InfraredSensor
 from pybricks.parameters import Port, Direction
 from pybricks.tools import wait
-
 ev3 = EV3Brick() # Inicializar el Brick
-
-# Configurar el motor en el puerto A (ajusta el puerto según tu conexión)
-motor = Motor(Port.A)
-
-# Configurar el sensor infrarrojo en el puerto 4 (ajusta el puerto según tu conexión)
-sensor_ir = InfraredSensor(Port.4)
-
-# Umbral de distancia (en porcentaje del 0 al 100, donde valores más bajos indican mayor cercanía)
-UMBRAL_DISTANCIA = 30
-
+motor = Motor(Port.A) # Configurar el motor en el puerto A
+sensor_ir = InfraredSensor(Port.4) # Configurar el sensor infrarrojo en el puerto 4
 ev3.speaker.beep()
 print("Sistema listo. Esperando objeto...")
-
 while True:
-    # Leer la proximidad del objeto (retorna un valor aproximado de 0 a 100)
-    distancia = sensor_ir.distance()
-    
-    # Comprobar si hay un objeto dentro del umbral de detección
-    if distancia > 0 and distancia < UMBRAL_DISTANCIA:
+    distancia = sensor_ir.distance() # Leer la proximidad del objeto
+    if distancia > 0 and distancia < 30: # # Comprobar si hay un objeto dentro del umbral (0-100)
         ev3.speaker.say("Objeto detectado")
-        
-        # Girar el motor 360 grados a una velocidad moderada (200 grados/segundo)
-        motor.run_angle(200, 360)
-        
-        # Pausa breve para evitar activaciones repetidas inmediatas
-        wait(500)
+        motor.run_angle(200, 360) # Girar el motor 360 grados a una velocidad moderada (200 grados/segundo)
+        wait(500) # Pausa breve para evitar activaciones repetidas inmediatas
     else:
-        # Mantener el motor detenido si no hay objetos cerca
-        motor.stop()
-        
-    # Pequeña pausa para no saturar el procesador del EV3
-    wait(50)
+        motor.stop() # Mantener el motor detenido si no hay objetos cerca
+    wait(50) # Pequeña pausa para no saturar el procesador del EV3
 ```
 
 <br />
