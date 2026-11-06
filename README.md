@@ -16,7 +16,7 @@ En el siguiente enlace [--> Click](https://youtu.be/wHSbDzvcbXE) dejo un vídeo 
 
 Todos los puertos de entrada y salida tienen capacidades y una configuracion similar, por lo un sensor o actuador puede conectarse a cualquier puerto, eso si respetando que sea una entrada o salida. Incluso los puertos de salida contiene lineas de entrada como realimentación del control en lazo cerrado. Aquí dejo una descripción de los pines que resume la funcionalidad:
 <br />
-<div> 
+<div align="center"> 
   
 | <sub>PIN RJ-12</sub>| <sub>PUERTO DE ENTRADA</sub> | <sub>PUERTO DE SALIDA</sub> |
 |----------|:-------------:|------:|
