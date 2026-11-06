@@ -14,7 +14,7 @@ En el siguiente enlace [--> Click](https://youtu.be/wHSbDzvcbXE) dejo un vídeo 
   <img src="/images/ev3kit.png"></img>
 </p> <br />
 
-Todos los puertos de entrada y salida tienen capacidades y una configuracion similar, por lo un sensor o actuador puede conectarse a cualquier puerto, eso si respetando que sea una entrada o salida. Incluso los puertos de salida contiene lineas de entrada como realimentación del control en lazo cerrado. Aquí dejo una descripción de los pines que resume la funcionalidad:
+Todos los puertos de entrada y salida tienen capacidades y una configuracion similar, por lo que un sensor o actuador puede conectarse a cualquiera de los cuatro puertos siempre que corresponda un sensor como entrada y actuador como salida. Incluso los puertos de salida contienen lineas de realimentación para el control de lazo cerrado en los motores. Aquí dejo una descripción de los pines que resume la funcionalidad:
 <br />
 <div align="center"> 
   
