@@ -16,16 +16,17 @@ En el siguiente enlace [--> Click](https://youtu.be/wHSbDzvcbXE) dejo un vídeo 
 
 </p>
 Todos los puertos de entrada y salida tienen capacidades y una configuracion similar, por lo un sensor o actuador puede conectarse a cualquier puerto, eso si respetando que sea una entrada o salida. Incluso los puertos de salida contiene lineas de entrada como realimentación del control en lazo cerrado. Aquí dejo una descripción de los pines que resume la funcionalidad:
-<br clear="center"/>
-</p>
-
-| Las mesas | son | geniales |
-|----------|:-------------:|------:|
-| columna 1 es | alineada a la izquierda | $1600 |
-| columna 2 está | centrada | $12 |
-| columna 3 está | alineada a la derecha | $1 |
- 
 <br />
+</p>
+| PIN RJ-12| PUERTO DE ENTRADA | PUERTO DE SALIDA |
+|----------|:-------------:|------:|
+| 1 | ADC/TC | PWM+ |
+| 2 | GND | PWM- |
+| 3 | GND | GND |
+| 4 | +5V | +5V |
+| 5 | SCL/IN1 | ENCA |
+| 6 | SCK/IN2 | ENCB |
+<br clear="center"/>
 Autor: Pablo Zarate, puedes contactarme a pablinza@me.com / pablinzte@gmail.com.  <br />
 Visita mi Blog  [Blog de Contenidos](https://pablinza.blogspot.com/). <br />
 Visita mi Canal [Mi canal Youtube](http://www.youtube.com/@pablozarate7524). <br />
