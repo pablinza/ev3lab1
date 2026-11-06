@@ -29,6 +29,7 @@ Todos los puertos de entrada y salida tienen capacidades y una configuracion sim
 </div>
 <br />
 A continuación se observa un programa simple que permite mover un servomotor en presencia de un objeto cercano al sensor IR
+<br />
 
 ```python
 from pybricks.hubs import EV3Brick
