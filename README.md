@@ -27,6 +27,49 @@ Todos los puertos de entrada y salida tienen capacidades y una configuracion sim
 | 5 | <sub>SCL/IN1 (3.3V)</sub> | <sub>ENCA(5V)</sub> |
 | 6 | <sub>SCK/IN2 (3.3V)</sub> | <sub>ENCB (5V)</sub> |
 </div>
+<br />
+A continuación se observa un programa simple que permite mover un servomotor en presencia de un objeto cercano al sensor IR
+
+```python
+from pybricks.hubs import EV3Brick
+from pybricks.ev3devices import Motor, InfraredSensor
+from pybricks.parameters import Port, Direction
+from pybricks.tools import wait
+
+ev3 = EV3Brick() # Inicializar el Brick
+
+# Configurar el motor en el puerto A (ajusta el puerto según tu conexión)
+motor = Motor(Port.A)
+
+# Configurar el sensor infrarrojo en el puerto 4 (ajusta el puerto según tu conexión)
+sensor_ir = InfraredSensor(Port.4)
+
+# Umbral de distancia (en porcentaje del 0 al 100, donde valores más bajos indican mayor cercanía)
+UMBRAL_DISTANCIA = 30
+
+ev3.speaker.beep()
+print("Sistema listo. Esperando objeto...")
+
+while True:
+    # Leer la proximidad del objeto (retorna un valor aproximado de 0 a 100)
+    distancia = sensor_ir.distance()
+    
+    # Comprobar si hay un objeto dentro del umbral de detección
+    if distancia > 0 and distancia < UMBRAL_DISTANCIA:
+        ev3.speaker.say("Objeto detectado")
+        
+        # Girar el motor 360 grados a una velocidad moderada (200 grados/segundo)
+        motor.run_angle(200, 360)
+        
+        # Pausa breve para evitar activaciones repetidas inmediatas
+        wait(500)
+    else:
+        # Mantener el motor detenido si no hay objetos cerca
+        motor.stop()
+        
+    # Pequeña pausa para no saturar el procesador del EV3
+    wait(50)
+```
 
 <br />
 Autor: Pablo Zarate, puedes contactarme a pablinza@me.com / pablinzte@gmail.com.  <br />
