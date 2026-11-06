@@ -18,14 +18,14 @@ Todos los puertos de entrada y salida tienen capacidades y una configuracion sim
 <br />
 <div> 
   
-| <small>PIN RJ-12</small>| <small>PUERTO DE ENTRADA</small> | <small>PUERTO DE SALIDA</small> |
+| <sub>PIN RJ-12</sub>| <sub>PUERTO DE ENTRADA</sub> | <sub>PUERTO DE SALIDA</sub> |
 |----------|:-------------:|------:|
-| 1 | 12-bit ADC(0-5V)/TC | PWM+ (+9V/0.7A) |
-| 2 | GND | PWM- (+9V/0.7A) |
-| 3 | GND | GND |
-| 4 | +5V / 0.2A) | +5V / 0.2A) |
-| 5 | SCL/IN1 (3.3V)| ENCA (5V) |
-| 6 | SCK/IN2 (3.3V)| ENCB (5V) |
+| 1 | <sub>12-bit ADC(0-5V)/TC</sub> | <sub>PWM+ (+9V/0.7A)</sub> |
+| 2 | <sub>GND</sub> | <sub>PWM-(+9V/0.7A)</sub> |
+| 3 | <sub>GND</sub> | <sub>GND</sub> |
+| 4 | <sub>+5V / 0.2A</sub> | <sub>+5V / 0.2A)</sub> |
+| 5 | <sub>SCL/IN1 (3.3V)</sub> | <sub>ENCA(5V)</sub> |
+| 6 | <sub>SCK/IN2 (3.3V)</sub> | <sub>ENCB (5V)</sub> |
 </div>
 
 <br />
