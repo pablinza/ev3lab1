@@ -14,12 +14,9 @@ En el siguiente enlace [--> Click](https://youtu.be/wHSbDzvcbXE) dejo un vídeo 
   <img src="/images/ev3kit.png"></img>
 </p> <br />
 
-</p>
 Todos los puertos de entrada y salida tienen capacidades y una configuracion similar, por lo un sensor o actuador puede conectarse a cualquier puerto, eso si respetando que sea una entrada o salida. Incluso los puertos de salida contiene lineas de entrada como realimentación del control en lazo cerrado. Aquí dejo una descripción de los pines que resume la funcionalidad:
 <br />
-
-<p align="center">
-  
+<div align="center"> 
 | PIN RJ-12| PUERTO DE ENTRADA | PUERTO DE SALIDA |
 |----------|:-------------:|------:|
 | 1 | 12-bit ADC(0-5V)/TC | PWM+ (+9V/0.7A) |
@@ -28,8 +25,8 @@ Todos los puertos de entrada y salida tienen capacidades y una configuracion sim
 | 4 | +5V / 0.2A) | +5V / 0.2A) |
 | 5 | SCL/IN1 (3.3V)| ENCA (5V) |
 | 6 | SCK/IN2 (3.3V)| ENCB (5V) |
+</div>
 <br />
-
 Autor: Pablo Zarate, puedes contactarme a pablinza@me.com / pablinzte@gmail.com.  <br />
 Visita mi Blog  [Blog de Contenidos](https://pablinza.blogspot.com/). <br />
 Visita mi Canal [Mi canal Youtube](http://www.youtube.com/@pablozarate7524). <br />
