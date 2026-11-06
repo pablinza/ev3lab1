@@ -13,7 +13,13 @@ En el siguiente enlace [--> Click](https://youtu.be/wHSbDzvcbXE) dejo un vídeo 
 <p align="center">
   <img src="/images/ev3kit.png"></img>
 </p> <br />
-
+Todos los puertos de entrada y salida tienen capacidades y una configuracion similar, por lo un sensor o actuador puede conectarse a cualquier puerto, eso si respetando que sea una entrada o salida. Incluso los puertos de salida contiene lineas de entrada como realimentación del control en lazo cerrado. Aquí dejo una descripción de los pines que resume la funcionalidad:
+| Las mesas | son | geniales |
+|----------|:-------------:|------:|
+| columna 1 es | alineada a la izquierda | $1600 |
+| columna 2 está | centrada | $12 |
+| columna 3 está | alineada a la derecha | $1 |
+ 
  <br />
 Autor: Pablo Zarate, puedes contactarme a pablinza@me.com / pablinzte@gmail.com.  <br />
 Visita mi Blog  [Blog de Contenidos](https://pablinza.blogspot.com/). <br />
